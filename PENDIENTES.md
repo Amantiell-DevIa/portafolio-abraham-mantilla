@@ -5,7 +5,7 @@
 - [ ] **Permiso de los clientes** para aparecer con nombre, portada y enlace: LáminasPro y AutoglassBox (Cristóbal), Shenoa (Círculo Gold) y Menigar. Menigar es lo más delicado, porque su prototipo aún no es la web oficial.
 - [ ] **Foto profesional** cuadrada (≥ 800 px). El hueco está listo en el medallón; las instrucciones están en el README.
 - [ ] **Datos para el aviso legal y la política de privacidad.** En España son obligatorios (LSSI-CE y RGPD): nombre, NIF, email de contacto y localidad. Hoy la web no usa cookies ni analítica, así que no necesita banner de cookies.
-- [ ] **Dominio.** Cuando lo tengas, se añaden `canonical`, `og:url`, la URL absoluta de `og:image` (hoy es relativa y algunas redes no la leen) y `sitemap.xml`.
+- [ ] **Dominio propio** (opcional). Hoy la web vive en https://abraham-mantilla.vercel.app con canonical, og:image absoluta y sitemap. Si compras un dominio, se cambian esas tres URL.
 - [ ] **Testimonios** reales cuando los tengas. No hay ninguno inventado.
 - [ ] **Email y redes** (opcional). Ahora el único contacto es WhatsApp y el teléfono.
 
