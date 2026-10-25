@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Capa de movimiento («flow motion»)
+   Todo cuelga de .flow-on, que solo pone flow.js cuando GSAP y ScrollTrigger
+   cargaron y no hay movimiento reducido. Sin esa clase, la base de style.css
+   se ve completa.
+   ========================================================================== */
+
+/* Lenis (scroll suave con ratón o trackpad) */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* Líneas de los titulares: la máscara deja sitio a los descendentes de la serif */
+.linea-mask { padding-bottom: .14em; margin-bottom: -.14em; }
+
+/* Relato que se ilumina palabra a palabra */
+.flow-on .historia__relato .palabra { will-change: opacity; }
+
+/* Trayecto: la línea avanza con el scroll */
+.flow-on .trayecto { --avance: 0; }
+
+/* Proceso: el paso en curso se enciende; los demás se atenúan sin bajar de AA */
+.flow-on .pasos { --progreso: 0; }
+.flow-on .paso { opacity: .72; transition: opacity .5s ease; }
+.flow-on .paso.is-actual { opacity: 1; }
+.flow-on .paso .paso__num { color: var(--tinta-2); transition: color .5s ease; }
+.flow-on .paso.is-actual .paso__num { color: var(--em-tinta); }
+
+/* Conversación: el teléfono tiene alto fijo y los mensajes entran con el scroll */
+.flow-on .movil__marco { height: min(640px, calc(100svh - var(--cab) - 72px)); }
+.flow-on .movil__pantalla { overflow: hidden; }
+.flow-on .chat { will-change: transform; }
